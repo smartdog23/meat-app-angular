@@ -11,6 +11,7 @@ export class ShoppingCartService {
 
   addItem(item: MenuItem) {
     let foundItem = this.items.find((mItem) => mItem.menuItem.id === item.id)
+    // console.log(foundItem)
     if(foundItem) {
       foundItem.quantity = foundItem.quantity + 1
     } else {
